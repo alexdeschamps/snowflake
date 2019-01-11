@@ -4,7 +4,6 @@ import TrackSelector from '../components/TrackSelector'
 import NightingaleChart from '../components/NightingaleChart'
 import KeyboardListener from '../components/KeyboardListener'
 import Track from '../components/Track'
-import Wordmark from '../components/Wordmark'
 import LevelThermometer from '../components/LevelThermometer'
 import { eligibleTitles, trackIds, milestones, milestoneToPoints } from '../constants'
 import PointSummaries from '../components/PointSummaries'
@@ -50,50 +49,56 @@ const emptyState = (): SnowflakeAppState => {
     name: '',
     title: '',
     milestoneByTrack: {
-      'MOBILE': 0,
-      'WEB_CLIENT': 0,
-      'FOUNDATIONS': 0,
-      'SERVERS': 0,
-      'PROJECT_MANAGEMENT': 0,
-      'COMMUNICATION': 0,
-      'CRAFT': 0,
-      'INITIATIVE': 0,
-      'CAREER_DEVELOPMENT': 0,
-      'ORG_DESIGN': 0,
-      'WELLBEING': 0,
-      'ACCOMPLISHMENT': 0,
+      'DOMAIN_KNOWLEDGE': 0,
+      'CUSTOMER_EMPATHY': 0,
+      'EXECUTION': 0,
+      'CODING': 0,
+      'FOSTERING_TECHNICAL_EXCELLENCE': 0,
+      'QUALITY_CRAFTMANSHIP': 0,
+      'PROBLEM_SOLVING': 0,
+      'DESIGN_ARCHITECTURE': 0,
+      'JUDGEMENT_WISDOM': 0,
+      'INFLUENCE': 0,
+      'STEWARDSHIP': 0,
+      'COLLABORATION': 0,
+      'OUTCOME_DRIVEN': 0,
       'MENTORSHIP': 0,
-      'EVANGELISM': 0,
-      'RECRUITING': 0,
-      'COMMUNITY': 0
+      'ADAPTABILITY': 0,
+      'ENGAGEMENT_WITH_OTHER_TEAMS': 0,
+      'EXPECTATION_MANAGEMENT': 0,
+      'EXECUTIVE_ALIGNMENT':  0,
+      'PROCESS_AGILITY':  0,
     },
-    focusedTrackId: 'MOBILE'
+    focusedTrackId: 'DOMAIN_KNOWLEDGE'
   }
 }
 
 const defaultState = (): SnowflakeAppState => {
   return {
-    name: 'Cersei Lannister',
-    title: 'Staff Engineer',
+    name: 'Alex Deschamps',
+    title: 'Software Developer',
     milestoneByTrack: {
-      'MOBILE': 1,
-      'WEB_CLIENT': 2,
-      'FOUNDATIONS': 3,
-      'SERVERS': 2,
-      'PROJECT_MANAGEMENT': 4,
-      'COMMUNICATION': 1,
-      'CRAFT': 1,
-      'INITIATIVE': 4,
-      'CAREER_DEVELOPMENT': 3,
-      'ORG_DESIGN': 2,
-      'WELLBEING': 0,
-      'ACCOMPLISHMENT': 4,
-      'MENTORSHIP': 2,
-      'EVANGELISM': 2,
-      'RECRUITING': 3,
-      'COMMUNITY': 0
+      'DOMAIN_KNOWLEDGE': 2,
+      'CUSTOMER_EMPATHY': 3,
+      'EXECUTION': 1,
+      'CODING': 0,
+      'FOSTERING_TECHNICAL_EXCELLENCE': 1,
+      'QUALITY_CRAFTMANSHIP': 0,
+      'PROBLEM_SOLVING': 2,
+      'DESIGN_ARCHITECTURE': 2,
+      'JUDGEMENT_WISDOM': 0,
+      'INFLUENCE': 2,
+      'STEWARDSHIP': 3,
+      'COLLABORATION': 0,
+      'OUTCOME_DRIVEN': 0,
+      'MENTORSHIP': 5,
+      'ADAPTABILITY': 0,
+      'ENGAGEMENT_WITH_OTHER_TEAMS': 1,
+      'EXPECTATION_MANAGEMENT': 2,
+      'EXECUTIVE_ALIGNMENT':  0,
+      'PROCESS_AGILITY':  0,
     },
-    focusedTrackId: 'MOBILE'
+    focusedTrackId: 'DOMAIN_KNOWLEDGE'
   }
 }
 
@@ -155,11 +160,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             text-decoration: none;
           }
         `}</style>
-        <div style={{margin: '19px auto 0', width: 142}}>
-          <a href="https://medium.com/" target="_blank">
-            <Wordmark />
-          </a>
-        </div>
+        <div style={{margin: '19px auto 0', width: 142, fontSize: 50}}>Clio</div>
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
             <form>
@@ -198,14 +199,6 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             milestoneByTrack={this.state.milestoneByTrack}
             trackId={this.state.focusedTrackId}
             handleTrackMilestoneChangeFn={(track, milestone) => this.handleTrackMilestoneChange(track, milestone)} />
-        <div style={{display: 'flex', paddingBottom: '20px'}}>
-          <div style={{flex: 1}}>
-            Made with ❤️ by <a href="https://medium.engineering" target="_blank">Medium Eng</a>.
-            Learn about the <a href="https://medium.com/s/engineering-growth-framework" target="_blank">growth framework</a>.
-            Get the <a href="https://github.com/Medium/snowflake" target="_blank">source code</a>.
-            Read the <a href="https://medium.com/p/85e078bc15b7" target="_blank">terms of service</a>.
-          </div>
-        </div>
       </main>
     )
   }
