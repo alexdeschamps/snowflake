@@ -160,6 +160,9 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             text-decoration: none;
           }
         `}</style>
+        <button onClick={this.props.logout}>
+          log out
+        </button>
         <div style={{margin: '19px auto 0', width: 142, fontSize: 50}}>Clio</div>
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
