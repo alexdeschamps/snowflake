@@ -3,7 +3,7 @@
 # Make sure you have awscli installed, on mac that would be `pip install awscli`
 
 AWS_ACCESS_KEY_ID=AKIAIFL64RDMAW64AJGQ
-AWS_SECRET_ACCESS_KEY= TODO TODO TODO REPLACE ME WITH THE KEY FROM LAST PASS NOT QUOTE!!
+AWS_SECRET_ACCESS_KEY=V5lQHbyYprtYxcVRF3M2ihJZZczeO276wPjc1bNx
 
 yarn export
 
