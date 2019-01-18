@@ -63,7 +63,7 @@ class index extends Component {
 	 	} else {
 	 		return(
 		 		<div>
-		 			<SnowflakeApp name={localStorage.getItem('fullName')} logout={this.logout} />
+		 			<SnowflakeApp name={localStorage.getItem('fullName')} userId={localStorage.getItem("userid")} logout={this.logout} />
 		 		</div>
 	 		)
 	 	}

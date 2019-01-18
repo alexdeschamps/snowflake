@@ -10,6 +10,7 @@ import PointSummaries from '../components/PointSummaries'
 import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
 import TitleSelector from '../components/TitleSelector'
+import { getUserTrack, saveUserTrack } from "../Services/persistence"
 
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap,
@@ -73,34 +74,6 @@ const emptyState = (): SnowflakeAppState => {
   }
 }
 
-const defaultState = (): SnowflakeAppState => {
-  return {
-    name: 'Alex Deschamps',
-    title: 'Software Developer',
-    milestoneByTrack: {
-      'DOMAIN_KNOWLEDGE': 2,
-      'CUSTOMER_EMPATHY': 3,
-      'EXECUTION': 1,
-      'CODING': 0,
-      'FOSTERING_TECHNICAL_EXCELLENCE': 1,
-      'QUALITY_CRAFTMANSHIP': 0,
-      'PROBLEM_SOLVING': 2,
-      'DESIGN_ARCHITECTURE': 2,
-      'JUDGEMENT_WISDOM': 0,
-      'INFLUENCE': 2,
-      'STEWARDSHIP': 3,
-      'COLLABORATION': 0,
-      'OUTCOME_DRIVEN': 0,
-      'MENTORSHIP': 5,
-      'ADAPTABILITY': 0,
-      'ENGAGEMENT_WITH_OTHER_TEAMS': 1,
-      'EXPECTATION_MANAGEMENT': 2,
-      'EXECUTIVE_ALIGNMENT':  0,
-      'PROCESS_AGILITY':  0,
-    },
-    focusedTrackId: 'DOMAIN_KNOWLEDGE'
-  }
-}
 
 const stateToHash = (state: SnowflakeAppState) => {
   if (!state || !state.milestoneByTrack) return null
@@ -114,6 +87,9 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   constructor(props: Props) {
     super(props)
     this.state = emptyState()
+    this.state.name = props.name;
+
+    this.saveUserTrackToServer = this.saveUserTrackToServer.bind(this);
   }
 
   componentDidUpdate() {
@@ -121,13 +97,9 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     if (hash) window.location.replace(`#${hash}`)
   }
 
-  componentDidMount() {
-    const state = hashToState(window.location.hash)
-    if (state) {
-      this.setState(state)
-    } else {
-      this.setState(defaultState())
-    }
+  async componentDidMount() {
+    const userData = await getUserTrack(this.props.userid);
+    this.setState(userData);
   }
 
   render() {
@@ -163,6 +135,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         <button onClick={this.props.logout}>
           log out
         </button>
+        <button type="button" onClick={this.saveUserTrackToServer}>Save Milestone Track</button>
         <div style={{margin: '19px auto 0', width: 142, fontSize: 50}}>Clio</div>
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
@@ -241,6 +214,11 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
     let titles = eligibleTitles(this.state.milestoneByTrack)
     title = titles.indexOf(title) == -1 ? titles[0] : title
     this.setState({ title })
+  }
+
+  saveUserTrackToServer() {
+    const {title, milestoneByTrack} = this.state;
+    saveUserTrack(this.props.userId, { title, milestoneByTrack })
   }
 }
 
