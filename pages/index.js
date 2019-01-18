@@ -1,4 +1,4 @@
-import SnowflakeApp from '../components/SnowflakeApp';
+import SnowflakeApp, { SnowflakeAppState } from '../components/SnowflakeApp';
 import React, { Component } from 'react';
 import { GoogleLogin } from 'react-google-login';
 import Config from '../config.json';
@@ -67,7 +67,7 @@ class index extends Component {
 	 	} else {
 	 		return(
 		 		<div>
-		 			<SnowflakeApp logout={this.logout} />
+		 			<SnowflakeApp name={localStorage.getItem('fullName')} userId={localStorage.getItem("userid")} logout={this.logout} />
 		 		</div>
 	 		)
 	 	}
