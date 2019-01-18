@@ -1,1 +1,1 @@
-export default () => <img src="../static/snowflake.png" alt="snowflake" />
+export default () => <img style={{width: '500px'}} src="../static/snowflake.png" alt="snowflake" />
