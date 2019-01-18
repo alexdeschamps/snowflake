@@ -10,8 +10,7 @@ export type TrackId =
   'PROBLEM_SOLVING' |
   'DESIGN_ARCHITECTURE' |
   'JUDGEMENT_WISDOM' |
-  'INFLUENCE' |
-  'PROCESS_AGILITY'
+  'INFLUENCE'
 
 export type Milestone = 0 | 1 | 2 | 3
 
@@ -25,7 +24,6 @@ export type MilestoneMap = {
   'DESIGN_ARCHITECTURE': Milestone,
   'JUDGEMENT_WISDOM': Milestone,
   'INFLUENCE': Milestone,
-  'PROCESS_AGILITY': Milestone,
 }
 export const milestones = [0, 1, 2, 3]
 
@@ -82,7 +80,6 @@ type Tracks = {|
   'DESIGN_ARCHITECTURE': Track,
   'JUDGEMENT_WISDOM': Track,
   'INFLUENCE': Track,
-  'PROCESS_AGILITY': Track
 |}
 
 export const tracks: Tracks = {
@@ -317,34 +314,32 @@ export const tracks: Tracks = {
     "category": "B",
     "description": "Ability to just really get your feast on.",
     "milestones": [{
-      "summary": "",
+      "summary": "Maybe just a sample.",
       "signals": [
-        "",
-        "",
+        "You attend every feast.",
       ],
       "examples": [
-        "",
-        "",
+        "You are able to eat an entire pig in one sitting.",
       ],
     }, {
-      "summary": "",
+      "summary": "Hollow-leg.",
       "signals": [
-        "",
-        "",
+        "You can party pretty hard.",
+        "You are only sometimes obnoxious though usually drunk at a feast.",
       ],
       "examples": [
-        "",
-        "",
+        "You are able to stay standing for at least 75% of the feast.",
+        "You only get into drunken brawls with other vikings below you in stature.",
       ],
     }, {
-      "summary": "",
+      "summary": "That is a lot of mead.",
       "signals": [
-        "",
-        "",
+        "You can keep up with the rest of the village in a feast.",
+        "Your ability to drink knows no equal.",
       ],
       "examples": [
-        "",
-        "",
+        "Be the last person still standing at the end of a feast.",
+        "Attend every feast with a Valhalla-like hunger.",
       ],
     }]
   },
@@ -353,70 +348,30 @@ export const tracks: Tracks = {
     "category": "C",
     "description": "General pillaging and plundering of rival villages.",
     "milestones": [{
-      "summary": "",
+      "summary": "Not empty-handed.",
       "signals": [
-        "",
-        "",
+        "You return from the raid with at least something to show for it.",
       ],
       "examples": [
-        "",
-        "",
+        "Pillage your own body weight in grain (2x your body weight for skinny warriors).",
       ],
     }, {
-      "summary": "",
+      "summary": "A mighty haul",
       "signals": [
-        "",
-        "",
+        "You reliably return with spoils of war.",
+        "You are able to pilfer some really sweet booty.",
       ],
       "examples": [
-        "",
-        "",
+        "Steal something nobody has ever stolen before.",
+        "Return from ten consecutive raids with a successful bounty of spoils.",
       ],
     }, {
-      "summary": "",
+      "summary": "Everything that isn't nailed down.",
       "signals": [
-        "",
-        "",
+        "You are single-handedly able to stir up enough confusion to allow the rest of the party to start looting.",
       ],
       "examples": [
-        "",
-        "",
-      ],
-    }]
-  },
-  "PROCESS_AGILITY": {
-    "displayName": "Looting",
-    "category": "C",
-    "description": "Getting what you can get while the getting is good.",
-    "milestones": [{
-      "summary": "",
-      "signals": [
-        "",
-        "",
-      ],
-      "examples": [
-        "",
-        "",
-      ],
-    }, {
-      "summary": "",
-      "signals": [
-        "",
-        "",
-      ],
-      "examples": [
-        "",
-        "",
-      ],
-    }, {
-      "summary": "",
-      "signals": [
-        "",
-        "",
-      ],
-      "examples": [
-        "",
-        "",
+        "You know the difference between looting and pillaging and can explain it to the rest of the class.",
       ],
     }]
   },
@@ -453,11 +408,11 @@ export const categoryColorScale = d3.scaleOrdinal()
 
 export const titles = [
   {label: 'Junior Viking in Training', minPoints: 0, maxPoints: 15},
-  {label: 'Assistant Housecarl', minPoints: 10, maxPoints: 100},
-  {label: 'Viking Raider', minPoints: 15, maxPoints: 100},
+  {label: 'Assistant Housecarl', minPoints: 10, maxPoints: 30},
+  {label: 'Viking Raider', minPoints: 15, maxPoints: 40},
   {label: 'Viking Commander', minPoints: 30, maxPoints: 100},
   {label: 'Viking Chieftan', minPoints: 40, maxPoints: 100},
-  {label: 'Jarl', minPoints: 50, maxPoints: 100},
+  {label: 'Jarl', minPoints: 40, maxPoints: 100},
 ]
 
 export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
