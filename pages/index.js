@@ -50,13 +50,14 @@ class index extends Component {
 	 	if (this.state.isAuthenticated == false) {
 	 		return(
 	 			<div style={{fontFamily: 'Helvetica', height: '90vh', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
-	 				<h1>snowflake</h1>
+	 				
 	 				<Logo />
-	 				<br />
+	 				
 	 				<GoogleLogin
+
 	                    clientId={Config.GOOGLE_CLIENT_ID}
 	                    render={renderProps => (
-	                        <button className="googlebutton"
+	                        <button style={{fontFamily: 'Helvetica', fontSize: 22, padding: '10px', borderRadius: '6px'}}
 	                                onClick={renderProps.onClick}>Sign In with your Clio Email</button>
 	                      )}
 	                    onSuccess={this.login}
