@@ -9,7 +9,7 @@ export const getUserTrack = (userId: string): any => {
     }
 
     return {
-        title: 'Software Developer',
+        title: 'Viking Raider',
         milestoneByTrack: sampleMilestonMapGenerator(),
     }
 }
@@ -17,7 +17,7 @@ export const getUserTrack = (userId: string): any => {
 const sampleMilestonMapGenerator = () => {
     const sampleMilestone = {}
     trackIds.map((track) => {
-        sampleMilestone[track] = Math.floor(Math.random() * 5);
+        sampleMilestone[track] = 0;
     });
     return sampleMilestone;
 }
