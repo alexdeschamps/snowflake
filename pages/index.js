@@ -38,6 +38,7 @@ class index extends Component {
                   localStorage.setItem('userid', user.id); 
                   localStorage.setItem('token', token);
                   localStorage.setItem('fullName', user.fullName);
+                  localStorage.setItem('email', user.email);
                   this.setState({isAuthenticated: true, user, token});  
               });
             } else {
@@ -68,7 +69,11 @@ class index extends Component {
 	 	} else {
 	 		return(
 		 		<div>
-		 			<SnowflakeApp name={localStorage.getItem('fullName')} userId={localStorage.getItem("userid")} logout={this.logout} />
+					<SnowflakeApp 
+						 name={localStorage.getItem('fullName')}
+						 email={localStorage.getItem('email')}
+						 userId={localStorage.getItem("userid")} 
+						 logout={this.logout} />
 		 		</div>
 	 		)
 	 	}

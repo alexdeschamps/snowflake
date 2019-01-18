@@ -1,3 +1,4 @@
 {
-  "GOOGLE_CLIENT_ID": "1038130832109-eaq714lcf746ng13rg9j3fin17163de6.apps.googleusercontent.com"
+  "GOOGLE_CLIENT_ID": "1038130832109-eaq714lcf746ng13rg9j3fin17163de6.apps.googleusercontent.com",
+  "service_url": "https://precious-snowflake.herokuapp.com/"
 }
