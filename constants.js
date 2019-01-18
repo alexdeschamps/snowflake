@@ -6,46 +6,28 @@ export type TrackId =
   'CUSTOMER_EMPATHY' |
   'EXECUTION' |
   'CODING' |
-  'FOSTERING_TECHNICAL_EXCELLENCE' |
-  'QUALITY_CRAFTMANSHIP' |
+  'QUALITY_CRAFTSMANSHIP' |
   'PROBLEM_SOLVING' |
   'DESIGN_ARCHITECTURE' |
   'JUDGEMENT_WISDOM' |
   'INFLUENCE' |
-  'STEWARDSHIP' |
-  'COLLABORATION' |
-  'OUTCOME_DRIVEN' |
-  'MENTORSHIP' |
-  'ADAPTABILITY' |
-  'ENGAGEMENT_WITH_OTHER_TEAMS' |
-  'EXPECTATION_MANAGEMENT' |
-  'EXECUTIVE_ALIGNMENT' |
   'PROCESS_AGILITY'
 
-export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
+export type Milestone = 0 | 1 | 2 | 3
 
 export type MilestoneMap = {
   'DOMAIN_KNOWLEDGE': Milestone,
   'CUSTOMER_EMPATHY': Milestone,
   'EXECUTION': Milestone,
   'CODING': Milestone,
-  'FOSTERING_TECHNICAL_EXCELLENCE': Milestone,
-  'QUALITY_CRAFTMANSHIP': Milestone,
+  'QUALITY_CRAFTSMANSHIP': Milestone,
   'PROBLEM_SOLVING': Milestone,
   'DESIGN_ARCHITECTURE': Milestone,
   'JUDGEMENT_WISDOM': Milestone,
   'INFLUENCE': Milestone,
-  'STEWARDSHIP': Milestone,
-  'COLLABORATION': Milestone,
-  'OUTCOME_DRIVEN': Milestone,
-  'MENTORSHIP': Milestone,
-  'ADAPTABILITY': Milestone,
-  'ENGAGEMENT_WITH_OTHER_TEAMS': Milestone,
-  'EXPECTATION_MANAGEMENT': Milestone,
-  'EXECUTIVE_ALIGNMENT': Milestone,
-  'PROCESS_AGILITY': Milestone
+  'PROCESS_AGILITY': Milestone,
 }
-export const milestones = [0, 1, 2, 3, 4, 5]
+export const milestones = [0, 1, 2, 3]
 
 export const milestoneToPoints = (milestone: Milestone): number => {
   switch (milestone) {
@@ -95,1086 +77,346 @@ type Tracks = {|
   'CUSTOMER_EMPATHY': Track,
   'EXECUTION': Track,
   'CODING': Track,
-  'FOSTERING_TECHNICAL_EXCELLENCE': Track,
-  'QUALITY_CRAFTMANSHIP': Track,
+  'QUALITY_CRAFTSMANSHIP': Track,
   'PROBLEM_SOLVING': Track,
   'DESIGN_ARCHITECTURE': Track,
   'JUDGEMENT_WISDOM': Track,
   'INFLUENCE': Track,
-  'STEWARDSHIP': Track,
-  'COLLABORATION': Track,
-  'OUTCOME_DRIVEN': Track,
-  'MENTORSHIP': Track,
-  'ADAPTABILITY': Track,
-  'ENGAGEMENT_WITH_OTHER_TEAMS': Track,
-  'EXPECTATION_MANAGEMENT': Track,
-  'EXECUTIVE_ALIGNMENT': Track,
   'PROCESS_AGILITY': Track
 |}
 
 export const tracks: Tracks = {
   "DOMAIN_KNOWLEDGE": {
-    "displayName": "Domain Knowledge",
+    "displayName": "Cunning",
     "category": "A",
-    "description": "description1",
+    "description": "Overall craftiness.  Are you sufficiently wily and tricky?",
     "milestones": [{
-      "summary": "milestone 1",
+      "summary": "You know a thing or two.",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "Are you aware of what your foes are up to?",
+        "Can you plan a raid with more detail than just 'Loot and Pillage'?",
       ],
       "examples": [
-        "example 1",
-        "example 2",
+        "Call out an assassination attempt before it occurs (you don't need to be correct).",
+        "Develop a plan for a raid with at least four distinct steps.",
       ],
     }, {
-      "summary": "milestone 2",
+      "summary": "Pretty sneaky, sis.",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "Able to develop plots that have subplots within their subplots.",
       ],
       "examples": [
-        "example 1",
-        "example 2",
+        "Get the drop on someone who was actively plotting against you.",
       ],
     }, {
-      "summary": "milestone 3",
+      "summary": "Loki, trickster god.",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "Devise a plan so cunning, so devious and yet so simple that nobody else considered it.",
+        "All of your plans involve at least three double-crosses.",
       ],
       "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 4",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 5",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
+        "Execute a plan where your goal was to get captured all along.",
       ],
     }]
   },
   "CUSTOMER_EMPATHY": {
-    "displayName": "Customer Empathy",
+    "displayName": "Ruthlessness",
     "category": "A",
-    "description": "description1",
+    "description": "A willingness to do what must be done to secure the long-term prosperity of our village.",
     "milestones": [{
-      "summary": "milestone 1",
+      "summary": "Willing to induce mild discomfort.",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "You are able to ask your fellow warriors to do things that are uncomfortable (like farming).",
       ],
       "examples": [
-        "example 1",
-        "example 2",
+        "Scheduling a raid when the weather is inclement.",
       ],
     }, {
-      "summary": "milestone 2",
+      "summary": "Willing to do what others would rather not.",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "Your moral compass spins wildly in all directions.",
       ],
       "examples": [
-        "example 1",
-        "example 2",
+        "Sacking a town when you totally know there's a curse associated with it.",
       ],
     }, {
-      "summary": "milestone 3",
+      "summary": "The blood in your veins runs as cold as glacier runoff.",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "You are completely devoid of scruples.",
+        "At least once a week someone remarks on one of your decisions 'Damn, that's cold.'",
       ],
       "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 4",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 5",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
+        "Raiding the same village twice in one month.",
       ],
     }]
   },
   "EXECUTION": {
     "displayName": "Execution",
     "category": "A",
-    "description": "description1",
+    "description": "Literally execution.  Ability to make heads roll.",
     "milestones": [{
-      "summary": "milestone 1",
+      "summary": "You can swing an axe (and not the spray for 14-year-olds).",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "You have the ability to raise a weapon over your head and bring it down with some accuracy.",
       ],
       "examples": [
-        "example 1",
-        "example 2",
+        "Dispatch a foe with a single blow.",
 
       ],
     }, {
-      "summary": "milestone 2",
+      "summary": "Ned Stark (from the first episode of season one, not the last episode of season one).",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "You carry out your own sentences.",
+        "You're better than Rob at dispatching Karstarks",
       ],
       "examples": [
-        "example 1",
-        "example 2",
+        "Upholding the King's law.",
+        "Showing no mercy for deserters.",
       ],
     }, {
-      "summary": "milestone 3",
+      "summary": "Basically a Bond Villian.",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "You no longer focus on efficiency but instead creativity.",
       ],
       "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 4",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 5",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
+        "Construct an elaborate trap involving no less than three conveyor belts, a dozen pulleys, a carrot that suddenly drops down in front of a donkey to get it to walk, which flips the man into the pan and the trap is set.",
+        "Get a victim to ask you if you expect them to talk and have a witty response ready.",
       ],
     }]
   },
   "CODING": {
-    "displayName": "Coding",
+    "displayName": "Military Leadership",
     "category": "B",
-    "description": "description1",
+    "description": "Ability to coordinate attack and defence.",
     "milestones": [{
-      "summary": "milestone 1",
+      "summary": "Lead a squad of warriors to success in battle.",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "Coordinating attacks, coordinating retreats.",
+        "Fellow warriors actually listen to your commands.",
       ],
       "examples": [
-        "example 1",
-        "example 2",
+        "Lead a raid to an exceptionally hoard-like treasure.",
       ],
     }, {
-      "summary": "milestone 2",
+      "summary": "Raid leader.",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "Able to run an entire raid, from planning to execution.",
       ],
       "examples": [
-        "example 1",
-        "example 2",
+        "Lead five successful raids.",
       ],
     }, {
-      "summary": "milestone 3",
+      "summary": "Commander of the Armies of the North.",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "Able to control strategy, not just tactics.",
+        "Inspire leadership in multiple companies of men.",
       ],
       "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 4",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 5",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
+        "Lead two raids in two different places at the same time.",
+        "Stab more people than stab you in the majority of battles.",
       ],
     }]
   },
-  "FOSTERING_TECHNICAL_EXCELLENCE": {
-    "displayName": "Fostering Technical Excellence in others",
+  "QUALITY_CRAFTSMANSHIP": {
+    "displayName": "Alliance Forming",
     "category": "B",
-    "description": "description1",
+    "description": "Creating and maintaining alliances with rival villages.",
     "milestones": [{
-      "summary": "milestone 1",
+      "summary": "Playing nicely with other tribes.",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "You don't raid lands claimed by other tribes.",
+        "Those other tribes don't raid your lands.",
       ],
       "examples": [
-        "example 1",
-        "example 2",
+        "Stopping to think 'what would the Jarl say?' before ordering a raid.",
       ],
     }, {
-      "summary": "milestone 2",
+      "summary": "Lasting alliances.",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "Able to forge alliances that last more than sixty days.",
+        "Manages to get something of equal or greater value for everything we give up.",
       ],
       "examples": [
-        "example 1",
-        "example 2",
+        "Form a reciprocal alliance via strategic marriage.",
+        "Carry out a raid where the spoils are divided evenly",
       ],
     }, {
-      "summary": "milestone 3",
+      "summary": "Ally of convenience.",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "Recognizes when an alliance has run its course.",
       ],
       "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 4",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 5",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }]
-  },
-  "QUALITY_CRAFTMANSHIP": {
-    "displayName": "Quality / Craftsmanship",
-    "category": "B",
-    "description": "description1",
-    "milestones": [{
-      "summary": "milestone 1",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 2",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 3",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 4",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 5",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
+        "Break an existing alliance in order to make a better one with another rival.",
       ],
     }]
   },
   "PROBLEM_SOLVING": {
-    "displayName": "Problem Solving",
+    "displayName": "Longboat Construction",
     "category": "B",
-    "description": "description1",
+    "description": "Building effective naval vessels.",
     "milestones": [{
-      "summary": "milestone 1",
+      "summary": "Look, it floats, ok?",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "Can make a wooden structure that doesn't sink (at least not at first).",
       ],
       "examples": [
-        "example 1",
-        "example 2",
+        "Make a vessel capable of transporting one warrior in full gear over a fijord.",
       ],
     }, {
-      "summary": "milestone 2",
+      "summary": "We're going to need a bigger boat.",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "Your longboats can support an entire squadron of warriors on the open ocean.",
       ],
       "examples": [
-        "example 1",
-        "example 2",
+        "Fellow warriors request to get seats on your longboat.",
+        "Your longboats carry at least 50lbs of booty per raider on board.",
       ],
     }, {
-      "summary": "milestone 3",
+      "summary": "",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "Your vessels are capable of transporting warriors to the lands of the distant West.",
+        "All of your ships have really sharp looking racing stripes.",
       ],
       "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 4",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 5",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
+        "Build a ship that's first to arrive at the raid nine raids out of ten.",
       ],
     }]
   },
   "DESIGN_ARCHITECTURE": {
-    "displayName": "Design / Architecture",
+    "displayName": "Helmet Quality",
     "category": "B",
-    "description": "description1",
+    "description": "Having a really dope looking helmet that inspires terror in your enemies.",
     "milestones": [{
-      "summary": "milestone 1",
+      "summary": "At least it's something.",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "Wear something on your head.  Anything.",
       ],
       "examples": [
-        "example 1",
-        "example 2",
+        "Fashioning a squirrel pelt into a fetching headscarf.",
       ],
     }, {
-      "summary": "milestone 2",
+      "summary": "Hornswaggler.",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "You are more concerned with fashion than function.",
       ],
       "examples": [
-        "example 1",
-        "example 2",
+        "Wear a helmet with at least two horns.",
       ],
     }, {
-      "summary": "milestone 3",
+      "summary": "Did you see how bendy those horns were?",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "Your headgear strikes terror into the hearts of your enemies",
       ],
       "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 4",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 5",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
+        "Wear a helment that's at least 70% horns.",
       ],
     }]
   },
   "JUDGEMENT_WISDOM": {
-    "displayName": "Judgement / Wisdom",
+    "displayName": "Feasting Ability",
     "category": "B",
-    "description": "description1",
+    "description": "Ability to just really get your feast on.",
     "milestones": [{
-      "summary": "milestone 1",
+      "summary": "",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "",
+        "",
       ],
       "examples": [
-        "example 1",
-        "example 2",
+        "",
+        "",
       ],
     }, {
-      "summary": "milestone 2",
+      "summary": "",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "",
+        "",
       ],
       "examples": [
-        "example 1",
-        "example 2",
+        "",
+        "",
       ],
     }, {
-      "summary": "milestone 3",
+      "summary": "",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "",
+        "",
       ],
       "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 4",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 5",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
+        "",
+        "",
       ],
     }]
   },
   "INFLUENCE": {
-    "displayName": "Influence",
+    "displayName": "Pillaging",
     "category": "C",
-    "description": "description1",
+    "description": "General pillaging and plundering of rival villages.",
     "milestones": [{
-      "summary": "milestone 1",
+      "summary": "",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "",
+        "",
       ],
       "examples": [
-        "example 1",
-        "example 2",
+        "",
+        "",
       ],
     }, {
-      "summary": "milestone 2",
+      "summary": "",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "",
+        "",
       ],
       "examples": [
-        "example 1",
-        "example 2",
+        "",
+        "",
       ],
     }, {
-      "summary": "milestone 3",
+      "summary": "",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "",
+        "",
       ],
       "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 4",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 5",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }]
-  },
-  "STEWARDSHIP": {
-    "displayName": "Stewardship",
-    "category": "C",
-    "description": "description1",
-    "milestones": [{
-      "summary": "milestone 1",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 2",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 3",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 4",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 5",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }]
-  },
-  "COLLABORATION": {
-    "displayName": "Collaboration",
-    "category": "C",
-    "description": "description1",
-    "milestones": [{
-      "summary": "milestone 1",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 2",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 3",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 4",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 5",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }]
-  },
-  "OUTCOME_DRIVEN": {
-    "displayName": "Outcome Driven",
-    "category": "C",
-    "description": "description1",
-    "milestones": [{
-      "summary": "milestone 1",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 2",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 3",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 4",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 5",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }]
-  },
-  "MENTORSHIP": {
-    "displayName": "Mentorship",
-    "category": "C",
-    "description": "description1",
-    "milestones": [{
-      "summary": "milestone 1",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 2",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 3",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 4",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 5",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }]
-  },
-  "ADAPTABILITY": {
-    "displayName": "Adaptability",
-    "category": "C",
-    "description": "description1",
-    "milestones": [{
-      "summary": "milestone 1",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 2",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 3",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 4",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 5",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }]
-  },
-  "ENGAGEMENT_WITH_OTHER_TEAMS": {
-    "displayName": "Engagement with other teams",
-    "category": "D",
-    "description": "description1",
-    "milestones": [{
-      "summary": "milestone 1",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 2",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 3",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 4",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 5",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }]
-  },
-  "EXPECTATION_MANAGEMENT": {
-    "displayName": "Expectation Management",
-    "category": "D",
-    "description": "description1",
-    "milestones": [{
-      "summary": "milestone 1",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 2",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 3",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 4",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 5",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }]
-  },
-  "EXECUTIVE_ALIGNMENT": {
-    "displayName": "Executive Alignment",
-    "category": "D",
-    "description": "description1",
-    "milestones": [{
-      "summary": "milestone 1",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 2",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 3",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 4",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 5",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
+        "",
+        "",
       ],
     }]
   },
   "PROCESS_AGILITY": {
-    "displayName": "Process Agility",
-    "category": "D",
-    "description": "description1",
+    "displayName": "Looting",
+    "category": "C",
+    "description": "Getting what you can get while the getting is good.",
     "milestones": [{
-      "summary": "milestone 1",
+      "summary": "",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "",
+        "",
       ],
       "examples": [
-        "example 1",
-        "example 2",
+        "",
+        "",
       ],
     }, {
-      "summary": "milestone 2",
+      "summary": "",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "",
+        "",
       ],
       "examples": [
-        "example 1",
-        "example 2",
+        "",
+        "",
       ],
     }, {
-      "summary": "milestone 3",
+      "summary": "",
       "signals": [
-        "signal 1",
-        "signal 2",
+        "",
+        "",
       ],
       "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 4",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
-      ],
-    }, {
-      "summary": "milestone 5",
-      "signals": [
-        "signal 1",
-        "signal 2",
-      ],
-      "examples": [
-        "example 1",
-        "example 2",
+        "",
+        "",
       ],
     }]
   },
@@ -1210,12 +452,12 @@ export const categoryColorScale = d3.scaleOrdinal()
   .range(['#00abc2', '#428af6', '#e1439f', '#e54552'])
 
 export const titles = [
-  {label: 'Junior Software Developer', minPoints: 0, maxPoints: 16},
-  {label: 'Software Developer', minPoints: 17, maxPoints: 35},
-  {label: 'Senior Software Developer', minPoints: 36, maxPoints: 57},
-  {label: 'Staff Software Developer', minPoints: 36, maxPoints: 57},
-  {label: 'Principal Software Developer', minPoints: 58, maxPoints: 89},
-  {label: 'Fellow Software Developer', minPoints: 58, maxPoints: 89},
+  {label: 'Junior Viking in Training', minPoints: 0, maxPoints: 15},
+  {label: 'Assistant Housecarl', minPoints: 10, maxPoints: 100},
+  {label: 'Viking Raider', minPoints: 15, maxPoints: 100},
+  {label: 'Viking Commander', minPoints: 30, maxPoints: 100},
+  {label: 'Viking Chieftan', minPoints: 40, maxPoints: 100},
+  {label: 'Jarl', minPoints: 50, maxPoints: 100},
 ]
 
 export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
