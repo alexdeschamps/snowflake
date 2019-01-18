@@ -2,6 +2,7 @@ import SnowflakeApp from '../components/SnowflakeApp';
 import React, { Component } from 'react';
 import { GoogleLogin } from 'react-google-login';
 import Config from '../config.json';
+import Logo from '../components/Logo';
 
 class index extends Component {
 	constructor() {
@@ -48,7 +49,10 @@ class index extends Component {
 	 render() {
 	 	if (this.state.isAuthenticated == false) {
 	 		return(
-	 			<div>
+	 			<div style={{fontFamily: 'Helvetica', height: '90vh', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
+	 				<h1>snowflake</h1>
+	 				<Logo />
+	 				<br />
 	 				<GoogleLogin
 	                    clientId={Config.GOOGLE_CLIENT_ID}
 	                    render={renderProps => (
@@ -69,8 +73,5 @@ class index extends Component {
 	 	}
 	 }
 }
-
-
-
 
 export default index;
