@@ -2,8 +2,8 @@
 
 # Make sure you have awscli installed, on mac that would be `pip install awscli`
 
-AWS_ACCESS_KEY_ID=AKIAIFL64RDMAW64AJGQ
-AWS_SECRET_ACCESS_KEY=sekritsekritkey
+AWS_ACCESS_KEY_ID=AKIAJ5QMZGVMU2K54WAQ
+AWS_SECRET_ACCESS_KEY=secret
 
 yarn export
 
